@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f2f5;
+  min-height: 100vh;
+  padding: 30px 15px;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+  font-size: 26px;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 25px;
+}
+
+/* Summary Cards */
+.summary {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 140px;
+  padding: 18px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.card p {
+  font-size: 13px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.card h2 {
+  font-size: 22px;
+}
+
+.income-card  { background: #e8f5e9; color: #27ae60; }
+.expense-card { background: #fdecea; color: #e74c3c; }
+.balance-card { background: #e3f2fd; color: #2980b9; }
+
+/* Form Section */
+.form-section {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.form-section h3 {
+  font-size: 16px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.form-row input,
+.form-row select {
+  flex: 1;
+  padding: 10px 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  min-width: 120px;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+  border-color: #3498db;
+}
+
+.form-row button {
+  padding: 10px 22px;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.form-row button:hover {
+  background: #27ae60;
+}
+
+/* History Section */
+.history-section h3 {
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.history-header select {
+  padding: 7px 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 13px;
+  outline: none;
+}
+
+/* Transaction Item */
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 16px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: #fafafa;
+}
+
+.transaction-item:hover {
+  background: #f0f4f8;
+}
+
+.trans-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trans-icon {
+  font-size: 22px;
+}
+
+.trans-desc {
+  font-size: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+.trans-category {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.trans-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trans-amount {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.trans-amount.income  { color: #27ae60; }
+.trans-amount.expense { color: #e74c3c; }
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  font-size: 17px;
+  cursor: pointer;
+  padding: 3px 7px;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background: #ffe0e0;
+}
+
+/* Category icons map done in JS */
+
+.empty-msg {
+  text-align: center;
+  color: #aaa;
+  padding: 30px;
+  font-size: 15px;
+  display: none;
+}

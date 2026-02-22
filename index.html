@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>💰 Expense Tracker</h1>
+    <p class="subtitle">Track where your money goes</p>
+
+    <!-- Summary Cards -->
+    <div class="summary">
+      <div class="card income-card">
+        <p>Total Income</p>
+        <h2 id="totalIncome">₹0</h2>
+      </div>
+      <div class="card expense-card">
+        <p>Total Expense</p>
+        <h2 id="totalExpense">₹0</h2>
+      </div>
+      <div class="card balance-card">
+        <p>Balance</p>
+        <h2 id="balance">₹0</h2>
+      </div>
+    </div>
+
+    <!-- Add Transaction Form -->
+    <div class="form-section">
+      <h3>Add New Transaction</h3>
+
+      <div class="form-row">
+        <input type="text" id="descInput" placeholder="Description (e.g. Groceries)" />
+        <input type="number" id="amountInput" placeholder="Amount (₹)" min="1" />
+      </div>
+
+      <div class="form-row">
+        <select id="typeSelect">
+          <option value="expense">Expense</option>
+          <option value="income">Income</option>
+        </select>
+        <select id="categorySelect">
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Bills">Bills</option>
+          <option value="Salary">Salary</option>
+          <option value="Other">Other</option>
+        </select>
+        <button onclick="addTransaction()">Add</button>
+      </div>
+    </div>
+
+    <!-- Filter and History -->
+    <div class="history-section">
+      <div class="history-header">
+        <h3>Transaction History</h3>
+        <select id="filterCategory" onchange="displayTransactions()">
+          <option value="all">All Categories</option>
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Shopping">Shopping</option>
+          <option value="Bills">Bills</option>
+          <option value="Salary">Salary</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div id="transactionList"></div>
+      <div id="emptyMsg" class="empty-msg">No transactions yet. Add one above!</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
